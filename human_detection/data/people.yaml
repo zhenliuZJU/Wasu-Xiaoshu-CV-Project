@@ -1,0 +1,6 @@
+train: /media/huyingdong/Feishuo/codes/VOC2007/train.txt
+#train: /media/huyingdong/Feishuo/codes/VOC2007/val/JPEGImages
+val: /media/huyingdong/Feishuo/codes/VOC2007/val.txt
+#val: /media/huyingdong/Feishuo/codes/VOC2007/train/JPEGImages
+nc: 1
+names: ["people"]
