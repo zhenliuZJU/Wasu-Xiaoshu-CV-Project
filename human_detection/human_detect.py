@@ -12,11 +12,11 @@ import numpy as np
 
 class human_detection():
     def __init__(self):
-        # weights = './human_detection/runs/train/exp28/weights/best.pt'
-        weights = './runs/train/exp28/weights/best.pt'
+        weights = './human_detection/runs/train/exp28/weights/best.pt'
+        # weights = './runs/train/exp28/weights/best.pt'
         device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        # self.model = DetectMultiBackend(weights, device=device, dnn=False, data='./human_detection/data/people.yaml', fp16=False)
-        self.model = DetectMultiBackend(weights, device=device, dnn=False, data='./data/people.yaml',
+        self.model = DetectMultiBackend(weights, device=device, dnn=False, data='./human_detection/data/people.yaml', fp16=False)
+        # self.model = DetectMultiBackend(weights, device=device, dnn=False, data='./data/people.yaml',
                                         fp16=False)
         self.stride, self.names, self.pt = self.model.stride, self.model.names, self.model.pt
         self.imgsz = check_img_size((640, 640), s=self.stride)
